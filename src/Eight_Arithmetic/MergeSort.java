@@ -7,8 +7,8 @@ import java.util.Arrays;
  */
 public class MergeSort {
     public static void main(String[] args){
-        int arr[] = new int[]{1,3,5,2,4,6};
-        merge(arr,0,(arr.length-1)/2,arr.length-1);
+        int arr[] = new int[]{2,5,4,3,6,8,7,9};
+        sort(arr,0,arr.length-1);
         System.out.print(Arrays.toString(arr));
 
     }
@@ -17,7 +17,9 @@ public class MergeSort {
         int middle = (high + low) / 2;
         if (low < high) {//递归结束条件
             sort(arr, low, middle);
+            System.out.println(Arrays.toString(arr)+"middle before");
             sort(arr, middle + 1, high);
+            System.out.println(Arrays.toString(arr)+"middle after");
             merge(arr, low, middle, high);
         }
     }
@@ -53,8 +55,10 @@ public class MergeSort {
             i++;
             index++;
         }
-        for(int n=0;n<arr.length;n++){
-            arr[n]=temp[n];
+        //每次都从low开始添加,
+        for(int n=0;n<temp.length;n++){
+            System.out.println("low:"+low);
+            arr[n+low]=temp[n];
         }
     }
 }
