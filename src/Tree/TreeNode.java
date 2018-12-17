@@ -91,16 +91,30 @@ public class TreeNode {
           parentNode.rightNode = null;
           return;
       }
-      //
+      //递归循环左儿子
         parentNode = leftNode;
       if(parentNode!=null){
           parentNode.delete(i);
       }
+      //递归循环右儿子
        parentNode =rightNode;
       if(parentNode!=null){
           parentNode.delete(i);
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public String toString() {
