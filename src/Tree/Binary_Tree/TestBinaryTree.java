@@ -1,4 +1,4 @@
-package Tree;
+package Tree.Binary_Tree;
 
 //树的测试
 public class TestBinaryTree {

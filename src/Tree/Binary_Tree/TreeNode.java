@@ -1,4 +1,4 @@
-package Tree;
+package Tree.Binary_Tree;
 
 public class TreeNode {
     //节点数据
